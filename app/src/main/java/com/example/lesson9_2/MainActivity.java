@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText et1;
@@ -81,7 +82,12 @@ public class MainActivity extends AppCompatActivity {
             lastanswer = format[0] * format[2];
         }
         else if (format[1] == 3){
-            lastanswer = format[0] / format[2];
+            if (format[2] == 0){
+                Toast.makeText(this, "Cant divide by zero!", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                lastanswer = format[0] / format[2];
+            }
         }
         format[0] = lastanswer;
         et1.setText(String.valueOf(lastanswer));

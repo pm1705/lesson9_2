@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,5 +22,10 @@ public class credits extends AppCompatActivity {
         last = gi.getStringExtra("last");
         t1.setText(last);
 
+    }
+
+    public void backtocalc(View view) {
+        Intent ri = new Intent(this,MainActivity.class);
+        startActivity(ri);
     }
 }

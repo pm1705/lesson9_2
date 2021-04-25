@@ -50,6 +50,14 @@
             android:layout_height="0dp"
             android:layout_weight="10" />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:onClick="backtocalc"
+            android:text="back to calc" />
+
     </LinearLayout>
 
     <Space
